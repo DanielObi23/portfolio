@@ -65,6 +65,12 @@ const techStack = [
   },
 ];
 
+/**
+ * Format a categorized tech stack into an aligned ASCII table.
+ *
+ * @param techStack - Array of entries where each entry has a `category` and an `items` array; each entry's technologies are rendered as a single comma-separated cell.
+ * @returns A single string containing an ASCII table with headers "Category" and "Technologies", where each row represents an input category and its comma-separated technologies.
+ */
 function generateTechStackTable(
   techStack: { category: string; items: string[] }[],
 ) {

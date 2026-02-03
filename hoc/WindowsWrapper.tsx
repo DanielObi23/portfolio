@@ -5,6 +5,16 @@ import gsap from "gsap";
 import { Draggable } from "gsap/all";
 gsap.registerPlugin(Draggable);
 
+/**
+ * Wraps a React component with window-like behavior (open/close animations, draggable focus, and z-index).
+ *
+ * The wrapped component reads window state from the window store using the provided `windowKey` to determine
+ * whether it is open and what z-index to apply; it also registers drag handling to focus the window on press.
+ *
+ * @param Component - The React component to render inside the window wrapper
+ * @param windowKey - Unique key used to look up this window's state (isOpen, zIndex) and to focus the window
+ * @returns A higher-order React component that renders the given component inside an animated, draggable window tied to `windowKey`
+ */
 export default function WindowWrapper(Component: any, windowKey: string) {
   const Wrapped = (props: object) => {
     const focusWindow = useWindowStore((state) => state.focusWindow);
