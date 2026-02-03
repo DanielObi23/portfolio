@@ -6,7 +6,7 @@ export default function VscodeEditor() {
     <>
       <div className="col-span-11 row-span-1 grid grid-cols-12">
         <div
-          className={`border-t-[1.5] border-blue-700  flex justify-center gap-1 p-1 col-span-1 ${vscodeTheme["bg-editor"]}`}
+          className={`border-t-[1.5px] border-blue-700  flex justify-center gap-1 p-1 col-span-1 ${vscodeTheme["bg-editor"]}`}
         >
           <img src="/react-icon.png" alt="react icon" className="size-4" />
           page.tsx <X size={16} strokeWidth={3} />

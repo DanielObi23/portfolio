@@ -4,7 +4,7 @@ import WindowsControls from "@/components/WindowsControls";
 
 export default function VscodeNavbar() {
   return (
-    <div className="col-span-12 row-span-1 flex justify-between items-center p-2 border-b-[1.5] border-[#1e1e1e]">
+    <div className="col-span-12 row-span-1 flex justify-between items-center p-2 border-b-[1.5px] border-[#1e1e1e]">
       <ul className="flex gap-1">
         <li>
           <img

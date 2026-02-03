@@ -15,7 +15,7 @@ export default function WindowWrapper(Component: any, windowKey: string) {
     useGSAP(() => {
       const el = ref.current;
       if (!el) return;
-
+      gsap.killTweensOf(el);
       if (isOpen) {
         el.style.display = "block";
 

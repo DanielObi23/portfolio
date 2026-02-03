@@ -8,16 +8,16 @@ import {
 } from "@/constants/vscode";
 import { SquareTerminal } from "lucide-react";
 
-export default function VscodeTeminal() {
+export default function VscodeTerminal() {
   return (
-    <div className="col-span-11 row-span-8 border-t-[1] border-[#1e1e1e]">
+    <div className="col-span-11 row-span-8 border-t border-[#1e1e1e]">
       <div className="flex items-center justify-between px-2 py-1">
         <ul className="flex gap-2">
           {terminalNav.map((nav, i) => (
             <li
               key={i}
               className={
-                nav === "TERMINAL" ? "border-b-[1.2] border-blue-700" : ""
+                nav === "TERMINAL" ? "border-b-[1.2px] border-blue-700" : ""
               }
             >
               {nav}

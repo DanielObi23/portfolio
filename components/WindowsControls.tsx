@@ -5,13 +5,13 @@ export default function WindowsControls({ window }: { window: string }) {
   const closeWindow = useWindowStore((state) => state.closeWindow);
   return (
     <div className="flex gap-2">
-      <button onClick={() => closeWindow(window)}>
+      <button>
         <Minus />
       </button>
       <button>
         <Copy className="rotate-90 size-4" />
       </button>
-      <button>
+      <button onClick={() => closeWindow(window)}>
         <X className="size-4" />
       </button>
     </div>

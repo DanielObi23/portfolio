@@ -4,7 +4,7 @@ import {
   VscodeNavbar,
   VscodeEditor,
   VscodeSidebar,
-  VscodeTeminal,
+  VscodeTerminal,
 } from "@/components/vscodeComp";
 
 function Vscode() {
@@ -15,7 +15,7 @@ function Vscode() {
       <VscodeNavbar />
       <VscodeSidebar />
       <VscodeEditor />
-      <VscodeTeminal />
+      <VscodeTerminal />
     </div>
   );
 }
