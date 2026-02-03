@@ -7,6 +7,11 @@ import {
   VscodeTeminal,
 } from "@/components/vscodeComp";
 
+/**
+ * Renders a VS Code–styled UI composed of a navbar, sidebar, editor, and terminal in a responsive grid layout.
+ *
+ * @returns A React element containing the assembled VS Code-like interface
+ */
 function Vscode() {
   return (
     <div

@@ -2,6 +2,11 @@ import { navList } from "@/constants/vscode";
 import { Search, ArrowLeft, ArrowRight } from "lucide-react";
 import WindowsControls from "@/components/WindowsControls";
 
+/**
+ * Render a VS Code–style navigation bar with an app icon, navigation items, navigation controls, a search badge, and window controls.
+ *
+ * @returns A JSX element representing the VS Code–style navigation bar
+ */
 export default function VscodeNavbar() {
   return (
     <div className="col-span-12 row-span-1 flex justify-between items-center p-2 border-b-[1.5] border-[#1e1e1e]">

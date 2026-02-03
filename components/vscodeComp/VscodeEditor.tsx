@@ -1,6 +1,11 @@
 import { vscodeTheme } from "@/constants/vscode";
 import { X } from "lucide-react";
 
+/**
+ * Renders a static VS Code–style editor mockup with a header bar and a code snippet display.
+ *
+ * @returns A JSX element containing the editor-like UI (filename header with icons and a faux code block).
+ */
 export default function VscodeEditor() {
   return (
     <>

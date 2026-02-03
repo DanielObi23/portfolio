@@ -1,6 +1,11 @@
 import { sideBarList } from "@/constants/vscode";
 import { CircleUserRound, Settings } from "lucide-react";
 
+/**
+ * Render a vertical VS Code–style sidebar with grouped icons.
+ *
+ * @returns A React element containing a vertical sidebar that displays icons from `sideBarList` in the top group and user/settings icons in the bottom group.
+ */
 export default function VscodeSidebar() {
   return (
     <div className="row-span-11 w-15 flex flex-col items-center justify-between gap-2 py-3 px-2 border-r-[1.5] border-[#1e1e1e]">

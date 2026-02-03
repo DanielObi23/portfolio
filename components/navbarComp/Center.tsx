@@ -4,6 +4,11 @@ import useWindowStore from "@/store/useWIndows";
 import { Search } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 
+/**
+ * Renders the center navigation group: icon buttons (with tooltips) that toggle corresponding windows, a search input, and a gift icon.
+ *
+ * @returns The component's rendered JSX element.
+ */
 export default function Center() {
   const openWindow = useWindowStore((state) => state.openWindow);
   const closeWindow = useWindowStore((state) => state.closeWindow);

@@ -8,6 +8,13 @@ import {
 } from "@/constants/vscode";
 import { SquareTerminal } from "lucide-react";
 
+/**
+ * Renders a VS Code–style terminal UI showing navigation, terminal controls, a fake shell prompt, and a generated tech-stack table.
+ *
+ * The header displays navigation items from `terminalNav` with a highlight for "TERMINAL" and icon controls from `terminalNavIcons`. The content area shows the user's name/path, a simulated command run, and the output of `generateTechStackTable(techStack)`.
+ *
+ * @returns The React JSX element representing the terminal UI
+ */
 export default function VscodeTeminal() {
   return (
     <div className="col-span-11 row-span-8 border-t-[1] border-[#1e1e1e]">
