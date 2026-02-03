@@ -1,6 +1,7 @@
 import { navIcons } from "@/constants";
 import { cn } from "@/lib/utils";
 import useWindowStore from "@/store/useWIndows";
+import { Search } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 
 export default function Center() {
@@ -38,11 +39,7 @@ export default function Center() {
 
         <li className="w-50 rounded-full bg-gray-700 flex items-baseline justify-between px-2.5 py-1 text-sm order-2">
           <div className="flex gap-2 border-0">
-            <img
-              src={`/navbar/search-icon.png`}
-              alt={`search icon`}
-              className="h-5.5"
-            />
+            <Search className="h-4.5" />
             <input placeholder="Search" className="w-30 focus:outline-none" />
           </div>
 

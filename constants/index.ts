@@ -97,33 +97,6 @@ const blogPosts = [
   },
 ];
 
-const techStack = [
-  {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
-  {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
-  },
-  {
-    category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
-  },
-];
-
 const socials = [
   {
     id: 1,
@@ -202,7 +175,7 @@ const gallery = [
   },
 ];
 
-export { blogPosts, techStack, socials, photosLinks, gallery };
+export { blogPosts, socials, photosLinks, gallery };
 
 const WORK_LOCATION = {
   id: 1,
