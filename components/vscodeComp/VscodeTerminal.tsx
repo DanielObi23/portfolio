@@ -15,7 +15,7 @@ export default function VscodeTerminal() {
         <ul className="flex gap-2 text-xs">
           {terminalNav.map((nav, i) => (
             <li
-              key={i}
+              key={`nav-${i}`}
               className={
                 nav === "TERMINAL"
                   ? "border-b-[1.2px] border-blue-700 text-white "
@@ -38,23 +38,20 @@ export default function VscodeTerminal() {
 
           {terminalNavIcons.map((Icon, i) => {
             if (i === 3) {
-              return (
-                <>
-                  <li key={`separator`} className="text-gray-600">
-                    |
-                  </li>
-                  <li key={i}>
-                    <Icon strokeWidth={1.5} size={16} />
-                  </li>
-                </>
-              );
-            } else {
-              return (
-                <li key={i}>
+              return [
+                <li key="terminal-separator" className="text-gray-600">
+                  |
+                </li>,
+                <li key={`terminal-icon-${i}`}>
                   <Icon strokeWidth={1.5} size={16} />
-                </li>
-              );
+                </li>,
+              ];
             }
+            return (
+              <li key={`terminal-icon-${i}`}>
+                <Icon strokeWidth={1.5} size={16} />
+              </li>
+            );
           })}
         </ul>
       </div>

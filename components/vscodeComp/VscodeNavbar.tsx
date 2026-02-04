@@ -15,7 +15,7 @@ export default function VscodeNavbar() {
         </li>
 
         {navList.map((nav, i) => (
-          <li key={i}>{nav}</li>
+          <li key={`nav-menu-${i}`}>{nav}</li>
         ))}
       </ul>
 
