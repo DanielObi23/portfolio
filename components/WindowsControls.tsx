@@ -4,15 +4,15 @@ import { Minus, X, Copy } from "lucide-react";
 export default function WindowsControls({ window }: { window: string }) {
   const closeWindow = useWindowStore((state) => state.closeWindow);
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-3 items-center">
       <button>
-        <Minus />
+        <Minus className="size-4" />
       </button>
       <button>
         <Copy className="rotate-90 size-4" />
       </button>
       <button onClick={() => closeWindow(window)}>
-        <X className="size-4" />
+        <X className="size-5" />
       </button>
     </div>
   );

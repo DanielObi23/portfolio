@@ -40,6 +40,8 @@
 }
 
 @theme inline {
+  --color-vscode-ui: oklch(0.214 0 0);
+  --color-vscode-editor: oklch(0.286 0 0);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

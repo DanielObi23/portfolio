@@ -5,10 +5,10 @@ import {
   BugPlay,
   Blocks,
   X,
-  Plus,
-  ChevronDown,
   MoreHorizontal,
   Maximize,
+  Trash2,
+  Columns2,
 } from "lucide-react";
 
 const navList = [
@@ -32,15 +32,10 @@ const terminalNav = [
   "PORTS",
 ];
 
-const terminalNavIcons = [Plus, ChevronDown, MoreHorizontal, Maximize, X];
+const terminalNavIcons = [Columns2, Trash2, MoreHorizontal, Maximize, X];
 
 const firstname = "chibuikem";
 const lastname = "onwu-obi";
-
-const vscodeTheme = {
-  "bg-ui": "bg-[#191919]",
-  "bg-editor": "bg-[#2A2A2A]",
-};
 
 const techStack = [
   {
@@ -108,7 +103,6 @@ export {
   terminalNav,
   terminalNavIcons,
   generateTechStackTable,
-  vscodeTheme,
   firstname,
   lastname,
 };
