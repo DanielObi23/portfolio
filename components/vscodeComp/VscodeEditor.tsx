@@ -37,7 +37,17 @@ export default function VscodeEditor() {
             <p className="text-gray-400">2</p>
             <p>
               <span className="text-purple-400">return</span>&nbsp;
-              {"<h1>Welcome to my portfolio</h1>"}
+              <span className="text-gray-400">
+                {"<"}
+                <span className="text-blue-400">h1</span>
+                {">"}
+              </span>
+              <span>Welcome to my portfolio</span>
+              <span className="text-gray-400">
+                {"<"}
+                <span className="text-blue-400">h1</span>
+                {"/>"}
+              </span>
             </p>
           </div>
           <div className="flex gap-3">
