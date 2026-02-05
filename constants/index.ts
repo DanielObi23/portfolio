@@ -11,13 +11,13 @@ const navIcons = [
     id: "contacts",
     name: "Contacts",
     src: `${NAV_ICON_FOLDER}/contacts-icon.png`,
-    canOpen: true,
+    canOpen: false,
   },
   {
     id: "file-explorer",
     name: "File Explorer",
     src: `${NAV_ICON_FOLDER}/file-explorer-icon.png`,
-    canOpen: true,
+    canOpen: false,
   },
   {
     id: "chrome",
@@ -41,7 +41,7 @@ const navIcons = [
     id: "photos",
     name: "Photos",
     src: `${NAV_ICON_FOLDER}/photos-icon.png`,
-    canOpen: true,
+    canOpen: false,
   },
 ];
 
