@@ -8,7 +8,7 @@ export default function VscodeNavbar() {
       <ul className="flex gap-2 items-center text-sm">
         <li>
           <img
-            src="/navbar/vscode-icon.png"
+            src="/icons/vscode-icon.png"
             alt="vscode icon"
             className="size-5"
           />

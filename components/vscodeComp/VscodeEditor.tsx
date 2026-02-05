@@ -26,8 +26,9 @@ export default function VscodeEditor() {
           <div className="flex gap-3">
             <p className="text-gray-400">1</p>
             <p>
-              <span className="text-purple-400">export default function</span>
+              <span className="text-purple-400">export default</span>
               &nbsp;
+              <span className="text-blue-400">function</span>&nbsp;
               <span className="text-yellow-200">Home</span>
               <span className="text-yellow-300 font-semibold">( ) {"{"}</span>
             </p>
