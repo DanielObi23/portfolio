@@ -1,4 +1,4 @@
-const NAV_ICON_FOLDER = "/navbar";
+const NAV_ICON_FOLDER = "/icons";
 
 const navIcons = [
   {
@@ -8,16 +8,10 @@ const navIcons = [
     canOpen: false,
   },
   {
-    id: "copilot",
-    name: "Copilot",
-    src: `${NAV_ICON_FOLDER}/copilot-icon.png`,
-    canOpen: false,
-  },
-  {
-    id: "microsoft-store",
-    name: "Microsoft Store",
-    src: `${NAV_ICON_FOLDER}/microsoft-store-icon.png`,
-    canOpen: false,
+    id: "contacts",
+    name: "Contacts",
+    src: `${NAV_ICON_FOLDER}/contacts-icon.png`,
+    canOpen: true,
   },
   {
     id: "file-explorer",
@@ -32,21 +26,15 @@ const navIcons = [
     canOpen: true,
   },
   {
-    id: "teams",
-    name: "Teams",
-    src: `${NAV_ICON_FOLDER}/teams-icon.png`,
-    canOpen: false,
+    id: "notepad",
+    name: "Notepad",
+    src: `${NAV_ICON_FOLDER}/notepad-icon.png`,
+    canOpen: true,
   },
   {
     id: "vscode",
     name: "VS Code",
     src: `${NAV_ICON_FOLDER}/vscode-icon.png`,
-    canOpen: true,
-  },
-  {
-    id: "microsoft-edge",
-    name: "Microsoft Edge",
-    src: `${NAV_ICON_FOLDER}/microsoft-edge-icon.png`,
     canOpen: true,
   },
   {
@@ -61,13 +49,12 @@ const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
   start: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  copilot: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  "microsoft-store": { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  contacts: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  notepad: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   "file-explorer": { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   chrome: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  teams: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   vscode: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  "microsoft-edge": { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { navIcons, INITIAL_Z_INDEX, WINDOW_CONFIG };

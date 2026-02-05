@@ -63,7 +63,7 @@ export default function Right() {
         <img
           data-tooltip-id="settings"
           data-tooltip-content="wifi"
-          src="/navbar/wifi-icon.png"
+          src="/icons/wifi-icon.png"
           alt="wifi icon"
           className="h-5.5"
         />
@@ -71,7 +71,7 @@ export default function Right() {
         <img
           data-tooltip-id="settings"
           data-tooltip-content="volume"
-          src="/navbar/volume-icon.png"
+          src="/icons/volume-icon.png"
           alt="volume icon"
           className="h-5"
         />
@@ -79,7 +79,7 @@ export default function Right() {
         <img
           data-tooltip-id="settings"
           data-tooltip-content="battery"
-          src="/navbar/battery-icon.png"
+          src="/icons/battery-icon.png"
           alt="battery icon"
           className="h-4.5 rotate-180"
         />
