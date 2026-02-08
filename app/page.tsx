@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import {
   VscodeWindow,
-  ChromeWindow,
   NotepadWindow,
   ContactsWindow,
   FileExplorerWindow,
@@ -17,7 +16,6 @@ export default function Home() {
       <Navbar />
 
       <VscodeWindow />
-      <ChromeWindow />
       <PDFWindow />
       <NotepadWindow />
       <ContactsWindow />

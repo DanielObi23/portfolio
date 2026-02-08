@@ -100,7 +100,7 @@ function FileExplorer() {
               if (file.fileType === "url") {
                 return (
                   <a key={file.id} href={file.link} target="_blank">
-                    <button className="flex flex-col items-center gap-2 p-2 rounded-md hover:bg-[#2A2A2A] cursor-pointer">
+                    <div className="flex flex-col items-center gap-2 p-2 rounded-md hover:bg-[#2A2A2A] cursor-pointer">
                       <img
                         src={file.icon}
                         alt="file icon"
@@ -109,7 +109,7 @@ function FileExplorer() {
                       <span className="text-xs text-center opacity-80">
                         {file.title}
                       </span>
-                    </button>
+                    </div>
                   </a>
                 );
               }
@@ -173,6 +173,8 @@ function FileExplorer() {
                   </button>
                 );
               }
+
+              return null;
             })}
           </div>
         </main>

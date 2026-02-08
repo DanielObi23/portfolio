@@ -29,9 +29,7 @@ export default function Center() {
             data-tooltip-content={icon.name}
             className={cn(i === 0 ? "order-1" : "order-3")}
           >
-            <button
-              onClick={() => toggleDisplay(icon.id as keyof WindowDataMap)}
-            >
+            <button onClick={() => toggleDisplay(icon.id)}>
               <img src={icon.src} alt={`${icon.name} icon`} className="h-8" />
             </button>
           </li>

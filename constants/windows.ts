@@ -2,7 +2,13 @@ import type { ProjectDescription } from "@/types/fileExplorerTypes";
 
 const NAV_ICON_FOLDER = "/icons";
 
-const navIcons = [
+type NavIcons = {
+  id: keyof WindowDataMap;
+  name: string;
+  src: string;
+};
+
+const navIcons: NavIcons[] = [
   {
     id: "start",
     name: "Start",

@@ -4,6 +4,8 @@ use same logic for screenshot viewing window
 change the resume from chrome to resume, remember to add to windows store in index.ts, consider changing to window.ts ✅
 remove location store data as well from index.ts and store ✅
 add dates on projects build for folders in fileexplorerwindow
+change resume icon to resume icon
+change the positions of files in each folders
 
 
 change all the fixed width e.g w-100 to w-xl or w-2xl etc, also check if this is responsive
