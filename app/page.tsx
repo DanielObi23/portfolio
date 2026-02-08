@@ -1,7 +1,15 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { VscodeWindow, ChromeWindow, NotepadWindow } from "@/windows/index";
+import {
+  VscodeWindow,
+  ChromeWindow,
+  NotepadWindow,
+  ContactsWindow,
+  FileExplorerWindow,
+  DescriptionWindow,
+  PDFWindow,
+} from "@/windows/index";
 
 export default function Home() {
   return (
@@ -10,7 +18,11 @@ export default function Home() {
 
       <VscodeWindow />
       <ChromeWindow />
+      <PDFWindow />
       <NotepadWindow />
+      <ContactsWindow />
+      <FileExplorerWindow />
+      <DescriptionWindow />
     </main>
   );
 }

@@ -60,7 +60,7 @@ const techStack = [
   },
 ];
 
-function generateTechStackTable(
+export function generateTechStackTable(
   techStack: { category: string; items: string[] }[],
 ) {
   const rows = techStack.map(({ category, items }) => ({
@@ -102,7 +102,6 @@ export {
   sideBarList,
   terminalNav,
   terminalNavIcons,
-  generateTechStackTable,
   firstname,
   lastname,
 };

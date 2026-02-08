@@ -6,6 +6,7 @@ import { Download, ChevronLeft, ChevronRight } from "lucide-react";
 import { pdfjs } from "react-pdf";
 import { Document, Page } from "react-pdf";
 import { useState } from "react";
+import useWindowStore from "@/store/windowsStore";
 
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
@@ -14,7 +15,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url,
 ).toString();
 
-function Chrome() {
+function PDF() {
+  const windows = useWindowStore((state) => state.windows);
+  const { data } = windows["pdf"];
+
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   return (
@@ -33,19 +37,19 @@ function Chrome() {
 
         {/* Center */}
         <p className="absolute left-1/2 -translate-x-1/2 text-sm font-medium select-none">
-          Resume.pdf
+          {data?.title}
         </p>
 
         {/* Right */}
         <div className="ml-auto">
-          <WindowsControls window="chrome" />
+          <WindowsControls window="pdf" />
         </div>
       </div>
 
       {/* PDF viewer */}
-      <div className="">
+      <div>
         <Document
-          file="/files/resume.pdf"
+          file={data?.url}
           onLoadSuccess={({ numPages }) => {
             setNumPages(numPages);
             setPageNumber(1);
@@ -87,6 +91,6 @@ function Chrome() {
   );
 }
 
-const ChromeWindow = WindowWrapper(Chrome, "chrome");
+const ResumeWindow = WindowWrapper(PDF, "pdf");
 
-export default ChromeWindow;
+export default ResumeWindow;

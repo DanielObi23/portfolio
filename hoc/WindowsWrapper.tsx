@@ -1,11 +1,17 @@
-import useWindowStore from "@/store/useWIndows";
-import { useLayoutEffect, useRef } from "react";
+"use client";
+
+import useWindowStore from "@/store/windowsStore";
+import { ComponentType, useLayoutEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
+import { WindowDataMap } from "@/constants/windows";
 gsap.registerPlugin(Draggable);
 
-export default function WindowWrapper(Component: any, windowKey: string) {
+export default function WindowWrapper(
+  Component: ComponentType,
+  windowKey: keyof WindowDataMap,
+) {
   const Wrapped = (props: object) => {
     const focusWindow = useWindowStore((state) => state.focusWindow);
     const windows = useWindowStore((state) => state.windows);
