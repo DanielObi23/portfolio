@@ -1,6 +1,6 @@
-import { navIcons } from "@/constants";
+import { navIcons, WindowDataMap } from "@/constants/windows";
 import { cn } from "@/lib/utils";
-import useWindowStore from "@/store/useWIndows";
+import useWindowStore from "@/store/windowsStore";
 import { Search } from "lucide-react";
 import { Tooltip } from "react-tooltip";
 
@@ -9,13 +9,13 @@ export default function Center() {
   const closeWindow = useWindowStore((state) => state.closeWindow);
   const windows = useWindowStore((state) => state.windows);
 
-  function toggleDisplay(windowKey: string) {
+  function toggleDisplay(windowKey: keyof WindowDataMap) {
     const window = windows[windowKey];
     if (!window) return;
     if (window.isOpen) {
       closeWindow(windowKey);
     } else {
-      openWindow(windowKey);
+      openWindow(windowKey, null);
     }
   }
 
@@ -44,7 +44,7 @@ export default function Center() {
           </div>
 
           <img
-            src={`/navbar/gift-icon.png`}
+            src={`/icons/gift-icon.png`}
             alt={`gift icon`}
             className="h-5.5"
           />

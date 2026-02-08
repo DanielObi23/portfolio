@@ -2,9 +2,9 @@ import {
   techStack,
   terminalNav,
   terminalNavIcons,
-  generateTechStackTable,
   firstname,
   lastname,
+  generateTechStackTable,
 } from "@/constants/vscode";
 import { ChevronDown, ChevronRight, Plus, SquareTerminal } from "lucide-react";
 

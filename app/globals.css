@@ -88,7 +88,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/wallpaper.jpg");
+  background-image: url("/wallpaper/wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
