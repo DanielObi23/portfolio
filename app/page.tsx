@@ -1,26 +1,11 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import {
-  VscodeWindow,
-  NotepadWindow,
-  ContactsWindow,
-  FileExplorerWindow,
-  DescriptionWindow,
-  PDFWindow,
-} from "@/windows/index";
+import Desktop from "@/components/desktop/Desktop";
+import Mobile from "@/components/Mobile";
+import { useScreen } from "@/hooks/useScreen";
 
 export default function Home() {
-  return (
-    <main className="relative">
-      <Navbar />
+  const { isDesktop } = useScreen();
 
-      <VscodeWindow />
-      <PDFWindow />
-      <NotepadWindow />
-      <ContactsWindow />
-      <FileExplorerWindow />
-      <DescriptionWindow />
-    </main>
-  );
+  return isDesktop ? <Desktop /> : <Mobile />;
 }

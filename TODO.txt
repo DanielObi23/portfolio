@@ -1,25 +1,48 @@
 description page, somehow get "data" from useWIndowStore to work as intented for description component window ✅
 make the techstack look nice ✅
-use same logic for screenshot viewing window
+use same logic for screenshot viewing window ✅
 change the resume from chrome to resume, remember to add to windows store in index.ts, consider changing to window.ts ✅
 remove location store data as well from index.ts and store ✅
-add dates on projects build for folders in fileexplorerwindow
-change resume icon to resume icon
-change the positions of files in each folders
+
+change resume icon to resume icon✅
+change the positions of files in each folders✅
 
 
-change all the fixed width e.g w-100 to w-xl or w-2xl etc, also check if this is responsive
+change all the fixed width e.g w-100 to w-xl or w-2xl etc, also check if this is responsive ✅
 
-get a single colour scheme for each window, matching each windows, also get the light and darkmode version, then clear all the additional shacn css variables
-go with just one theme, follow current theme, and add simple colour true to original colour scheme to differentiate window, then consider lightmode later
+get a single colour scheme for each window, matching each windows, also get the light and darkmode version, then clear all the additional shacn css variables ✅
+go with just one theme, follow current theme, and add simple colour true to original colour scheme to differentiate window, then consider lightmode later ✅
+
+add resume folder and other folders to homescreen ✅
+
+separate the icons into different folders, based on where they're used ✅
+
+change all icon from png to svg, and all png to jpg for images ✅
+
+files: [
+  website,
+  github,
+  description,
+  ...makeScreenshots("focusflow", 7),
+],
+
+export function makeScreenshots(
+  project: string,
+  count: number,
+) {
+  return Array.from({ length: count }, (_, i) => {
+    const n = i + 1;
+    return {
+      id: `${project}-screenshot-${n}`,
+      title: `screenshot-${n}`,
+      fileType: "img" as const,
+      imageUrl: `/screenshots/${project}/${project}-screenshot-${n}.jpg`,
+    };
+  });
+}
 
 
-
-separate the icons into different folders, based on where they're used
-
-change all icon from png to svg
-
-fix all windows showing at the start
+fix all windows showing at the start ✅
 
 write a readme for this portfolio
 

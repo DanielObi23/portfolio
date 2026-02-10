@@ -1,7 +1,7 @@
 "use client";
 
 import useWindowStore from "@/store/windowsStore";
-import { ComponentType, useLayoutEffect, useRef } from "react";
+import { ComponentType, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Draggable } from "gsap/all";
@@ -55,14 +55,13 @@ export default function WindowWrapper(
       return () => instance.kill();
     }, []);
 
-    useLayoutEffect(() => {
-      const el = ref.current;
-      if (!el) return;
-      el.style.display = isOpen ? "block" : "none";
-    }, []);
-
     return (
-      <section id={windowKey} ref={ref} style={{ zIndex }} className="absolute">
+      <section
+        id={windowKey}
+        ref={ref}
+        style={{ zIndex, display: "none" }}
+        className="absolute"
+      >
         <Component {...props} />
       </section>
     );

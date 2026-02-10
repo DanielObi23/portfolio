@@ -6,6 +6,7 @@ import ContactsWindow from "./Contacts";
 import FileExplorerWindow from "./FileExplorer";
 import DescriptionWindow from "./file-explorer/Description";
 import PDFWindow from "./file-explorer/PDF";
+import ScreenshotWindow from "./file-explorer/Screenshot";
 
 export {
   VscodeWindow,
@@ -14,4 +15,5 @@ export {
   FileExplorerWindow,
   DescriptionWindow,
   PDFWindow,
+  ScreenshotWindow,
 };

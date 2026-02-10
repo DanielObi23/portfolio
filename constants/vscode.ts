@@ -11,17 +11,6 @@ import {
   Columns2,
 } from "lucide-react";
 
-const navList = [
-  "File",
-  "Edit",
-  "Selection",
-  "View",
-  "Go",
-  "Run",
-  "Terminal",
-  "Help",
-];
-
 const sideBarList = [Files, Search, GitFork, BugPlay, Blocks];
 
 const terminalNav = [
@@ -98,7 +87,6 @@ export function generateTechStackTable(
 
 export {
   techStack,
-  navList,
   sideBarList,
   terminalNav,
   terminalNavIcons,

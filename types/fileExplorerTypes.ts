@@ -3,7 +3,7 @@ type FileType = "pdf" | "url" | "txt" | "img";
 interface BaseFile {
   id: string;
   title: string;
-  icon: string;
+  icon?: string;
   fileType: FileType;
 }
 
@@ -69,7 +69,7 @@ type ScreenshotPayload = {
   windowKey: "screenshot";
   data: {
     title: string;
-    url: string;
+    imageUrl: string;
   };
 };
 
@@ -97,4 +97,5 @@ export type {
   WindowPayload,
   ProjectFolder,
   ProjectDescription,
+  FileType,
 };

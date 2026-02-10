@@ -1,10 +1,11 @@
-import WindowsControls from "@/components/WindowsControls";
+import WindowsControls from "@/components/desktop/WindowsControls";
 import WindowWrapper from "@/hoc/WindowsWrapper";
 import useWindowStore from "@/store/windowsStore";
 
 function Description() {
-  const windows = useWindowStore((state) => state.windows);
-  const { data } = windows["description"];
+  const { data } = useWindowStore((state) => state.windows["description"]);
+  if (!data) return null;
+
   return (
     <div className="bg-[#141414] text-white w-150 h-150 rounded-md">
       {/* Header */}
@@ -16,7 +17,7 @@ function Description() {
             className="size-6 ml-1 mr-3 self-center"
           />
           <div className="bg-[#2A2A2A] flex items-center justify-between gap-2 px-3 py-1.5 rounded-t-md mr-0.5 whitespace-nowrap">
-            <span className="text-sm">{data?.title} Description</span>
+            <span className="text-sm">{data.title}</span>
           </div>
         </div>
 
@@ -24,15 +25,15 @@ function Description() {
       </div>
 
       {/* Editor space */}
-      <div className="h-13/14 bg-[#1E1E1E] p-4 text-sm leading-relaxed font-mono overflow-y-auto rounded-b-md">
-        <p className="whitespace-pre-line">{data?.description.text}</p>
+      <div className="h-13/14 bg-[#1E1E1E] p-4 text-sm leading-relaxed font-mono scrollbar rounded-b-md">
+        <p className="whitespace-pre-line">{data.description.text}</p>
         <div className="mt-6 space-y-4">
           <p className="text-xs uppercase tracking-wider text-neutral-400">
             Tech Stack
           </p>
 
           <div className="space-y-3">
-            {data?.description.techstack.map(({ category, items }) => (
+            {data.description.techstack.map(({ category, items }) => (
               <div
                 key={category}
                 className="border border-[#2A2A2A] rounded-md bg-[#181818]"

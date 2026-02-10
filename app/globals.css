@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "tailwind-scrollbar";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,8 +41,10 @@
 }
 
 @theme inline {
-  --color-vscode-ui: oklch(0.214 0 0);
-  --color-vscode-editor: oklch(0.286 0 0);
+  --color-window-surface: oklch(0.214 0 0);
+  --color-window-canvas: oklch(0.286 0 0);
+  --color-window-secondary: oklch(0.2349 0 0);
+  --color-window-accent: oklch(0.2831 0 0);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -88,7 +91,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/wallpaper/wallpaper.jpg");
+  background-image: url("/wallpaper/desktop-wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -145,4 +148,23 @@ body::before {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 150ms ease-out;
+}
+
+.scrollbar {
+  @apply overflow-y-auto scrollbar-thin scrollbar-thumb-[#3A3A3A] scrollbar-track-transparent;
 }
