@@ -1,26 +1,18 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import {
-  VscodeWindow,
-  NotepadWindow,
-  ContactsWindow,
-  FileExplorerWindow,
-  DescriptionWindow,
-  PDFWindow,
-} from "@/windows/index";
+import Desktop from "@/components/desktop/Desktop";
+import Mobile from "@/components/Mobile";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Navbar />
+    <>
+      <div className="block lg:hidden">
+        <Mobile />
+      </div>
 
-      <VscodeWindow />
-      <PDFWindow />
-      <NotepadWindow />
-      <ContactsWindow />
-      <FileExplorerWindow />
-      <DescriptionWindow />
-    </main>
+      <div className="hidden lg:block">
+        <Desktop />
+      </div>
+    </>
   );
 }

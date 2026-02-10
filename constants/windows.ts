@@ -1,6 +1,6 @@
 import type { ProjectDescription } from "@/types/fileExplorerTypes";
 
-const NAV_ICON_FOLDER = "/icons";
+const NAV_ICON_FOLDER = "/icons/window-icons";
 
 type NavIcons = {
   id: keyof WindowDataMap;
@@ -12,32 +12,32 @@ const navIcons: NavIcons[] = [
   {
     id: "start",
     name: "Start",
-    src: `${NAV_ICON_FOLDER}/start-icon.png`,
+    src: `${NAV_ICON_FOLDER}/start-icon.svg`,
   },
   {
     id: "contacts",
     name: "Contacts",
-    src: `${NAV_ICON_FOLDER}/contacts-icon.png`,
+    src: `${NAV_ICON_FOLDER}/contacts-icon.svg`,
   },
   {
     id: "file-explorer",
     name: "File Explorer",
-    src: `${NAV_ICON_FOLDER}/file-explorer-icon.png`,
-  },
-  {
-    id: "chrome",
-    name: "Chrome",
-    src: `${NAV_ICON_FOLDER}/chrome-icon.png`,
+    src: `${NAV_ICON_FOLDER}/file-explorer-icon.svg`,
   },
   {
     id: "notepad",
     name: "Notepad",
-    src: `${NAV_ICON_FOLDER}/notepad-icon.png`,
+    src: `${NAV_ICON_FOLDER}/notepad-icon.svg`,
   },
   {
     id: "vscode",
     name: "VS Code",
-    src: `${NAV_ICON_FOLDER}/vscode-icon.png`,
+    src: `${NAV_ICON_FOLDER}/vscode-icon.svg`,
+  },
+  {
+    id: "chrome",
+    name: "Chrome",
+    src: `${NAV_ICON_FOLDER}/chrome-icon.svg`,
   },
 ];
 
@@ -48,7 +48,7 @@ type WindowDataMap = {
   };
   screenshot: {
     title: string;
-    url: string;
+    imageUrl: string;
   };
   pdf: {
     title: string;
@@ -68,7 +68,7 @@ type WindowConfig<K extends keyof WindowDataMap> = {
   data: WindowDataMap[K] | null;
 };
 
-const INITIAL_Z_INDEX = 10;
+const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
   start: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
