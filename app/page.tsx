@@ -2,10 +2,17 @@
 
 import Desktop from "@/components/desktop/Desktop";
 import Mobile from "@/components/Mobile";
-import { useScreen } from "@/hooks/useScreen";
 
 export default function Home() {
-  const { isDesktop } = useScreen();
+  return (
+    <>
+      <div className="block lg:hidden">
+        <Mobile />
+      </div>
 
-  return isDesktop ? <Desktop /> : <Mobile />;
+      <div className="hidden lg:block">
+        <Desktop />
+      </div>
+    </>
+  );
 }

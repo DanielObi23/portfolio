@@ -10,7 +10,7 @@ import FileExplorerMain from "@/components/desktop/fileExplorerComp/FileExplorer
 
 function FileExplorer() {
   const [activeFolder, setActiveFolder] = useState<ActiveFolder["id"]>(
-    allFoldersId[0].id,
+    allFoldersId[0]?.id ?? "",
   );
 
   return (

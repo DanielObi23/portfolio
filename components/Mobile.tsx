@@ -1,3 +1,5 @@
+//TODO: start mobile version creation
+
 export default function Mobile() {
-  return <div>Hello worl</div>;
+  return <div>Hello world</div>;
 }

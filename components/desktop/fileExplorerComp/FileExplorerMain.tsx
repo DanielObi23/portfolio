@@ -38,6 +38,7 @@ export default function FileExplorerMain({
                 key={`${file.id}-${index}`}
                 href={file.link}
                 target="_blank"
+                rel="noopener noreferrer"
                 style={{ animationDelay }}
                 className="animate-fade-in"
               >
@@ -86,7 +87,7 @@ export default function FileExplorerMain({
 
           if (file.fileType === "pdf") {
             return (
-              <div
+              <button
                 key={`${file.id}-${index}`}
                 className="animate-fade-in flex flex-col items-center gap-2 p-2 rounded-md hover:bg-[#2A2A2A] cursor-pointer"
                 style={{ animationDelay }}
@@ -104,7 +105,7 @@ export default function FileExplorerMain({
                 <span className="text-xs text-center opacity-80">
                   {file.title}
                 </span>
-              </div>
+              </button>
             );
           }
 

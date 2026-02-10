@@ -15,7 +15,7 @@ export default function VscodeNavbar() {
       </ul>
 
       <div className="flex gap-2 items-center">
-        <div className="rounded-lg w-80 h-7 flex gap-1 items-center justify-center bg-vscode-editor text-sm">
+        <div className="rounded-lg w-80 h-7 flex gap-1 items-center justify-center bg-window-canvas text-sm">
           <Search size={16} />
           <span className="text-white">my techstack</span>
         </div>
