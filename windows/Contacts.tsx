@@ -14,11 +14,20 @@ function Contacts() {
       </div>
 
       <div className="flex flex-col items-center gap-4 p-4">
-        <img
-          src="/profile.jpg"
-          alt="profile photo"
-          className="size-20 rounded-full object-cover"
-        />
+        <div className="flex flex-col items-center text-center gap-3 max-w-xs">
+          <img
+            src="/profile.jpg"
+            alt="profile photo"
+            className="size-20 rounded-full object-cover"
+          />
+
+          <p className="text-lg font-semibold">Let&apos;s connect</p>
+
+          <p className="text-sm opacity-80 leading-relaxed">
+            Got an idea, a bug to squash, looking to hire, or just wanna talk
+            tech? I&apos;m in.
+          </p>
+        </div>
 
         <ul className="w-full space-y-1">
           {contacts.map(({ title, url, icon }) => (

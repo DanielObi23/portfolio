@@ -1,5 +1,6 @@
 update contacts window to have icons as well icon✅
-on page load, a flash of mobileonlyfallback shows
+on page load, a flash of mobileonlyfallback shows ✅
+change wallpaper to microsoft default, same with android default
 
 files: [
   website,
