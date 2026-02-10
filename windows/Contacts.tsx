@@ -1,22 +1,8 @@
 import WindowsControls from "@/components/desktop/WindowsControls";
 import WindowWrapper from "@/hoc/WindowsWrapper";
+import { contacts } from "@/constants/contacts";
 
 function Contacts() {
-  const contactLinks = [
-    {
-      label: "GitHub",
-      href: "https://github.com/DanielObi23",
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/chibuikem-daniel-onwu-obi-bb963a329/",
-    },
-    {
-      label: "Email",
-      href: "mailto:chibuikemonwuobi23@gmail.com",
-    },
-  ];
-
   return (
     <div className="w-xl rounded-md overflow-hidden bg-window-canvas text-sm text-white">
       <div className="grid grid-cols-[1fr_auto_1fr] items-center h-10 px-3 bg-window-surface">
@@ -34,15 +20,18 @@ function Contacts() {
           className="size-20 rounded-full object-cover"
         />
 
-        <ul className="w-full space-y-2 text-center">
-          {contactLinks.map(({ label, href }) => (
-            <li key={label}>
+        <ul className="w-full space-y-1">
+          {contacts.map(({ title, url, icon }) => (
+            <li key={title}>
               <a
-                href={href}
+                href={url}
                 target="_blank"
-                className="block rounded px-3 py-1.5 hover:bg-window-secondary transition"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 px-3 py-2 rounded-md hover:bg-window-secondary transition"
               >
-                {label}
+                <img src={icon} alt={`${title} icon`} className="size-5" />
+
+                <span className="text-md">{title}</span>
               </a>
             </li>
           ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import Desktop from "@/components/desktop/Desktop";
-import Mobile from "@/components/Mobile";
+import Mobile from "@/components/mobile/Mobile";
 
 export default function Home() {
   return (
