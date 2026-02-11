@@ -13,11 +13,13 @@ const tabs = [
   { title: "Work experience", id: "work-experience" },
 ];
 
-const aboutMe = `I am an aspiring developer with a genuine passion for programming and software development. 
-    I recently completed a comprehensive coding traineeship as a full stack developer, 
-    where I successfully delivered two real-world projects to specifications, plus additional personal projects. 
-    This hands-on experience allowed me to apply a wide range of programming languages and development tools, 
-    solidifying my technical knowledge and problem-solving abilities.`;
+const aboutMe = [
+  "I am an aspiring developer with a genuine passion for programming and software development.",
+
+  "I recently completed a comprehensive coding traineeship as a full stack developer, where I successfully delivered two real-world projects to specifications, plus additional personal projects.",
+
+  "This hands-on experience allowed me to apply a wide range of programming languages and development tools, solidifying my technical knowledge and problem-solving abilities.",
+];
 
 const education = [
   {

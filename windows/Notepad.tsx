@@ -34,7 +34,7 @@ function Notepad() {
   ];
 
   return (
-    <div className="bg-window-surface text-white w-150 h-150 rounded-md">
+    <div className="bg-primary text-white w-150 h-150 rounded-md">
       {/* Header */}
       <div className="h-1/14 flex justify-between px-2 pt-2">
         <div className="flex items-end">
@@ -49,7 +49,7 @@ function Notepad() {
               key={tab.id}
               onClick={() => setShowTab(tab.id)}
               className={cn(
-                showTab === tab.id && "bg-window-canvas",
+                showTab === tab.id && "bg-secondary",
                 "flex items-center justify-between gap-2 px-3 py-1.5 rounded-t-md mr-0.5 whitespace-nowrap cursor-pointer",
               )}
             >
@@ -63,7 +63,7 @@ function Notepad() {
       </div>
 
       {/* Toolbar */}
-      <div className="h-1/14 flex justify-between items-center py-1.5 px-2.5 bg-window-canvas">
+      <div className="h-1/14 flex justify-between items-center py-1.5 px-2.5 bg-secondary">
         <ul className="flex gap-3">
           <li>File</li>
           <li>Edit</li>
@@ -92,9 +92,15 @@ function Notepad() {
       </div>
 
       {/* Editor space */}
-      <div className="h-11/14 bg-window-secondary p-4 text-sm leading-relaxed font-mono scrollbar">
+      <div className="h-11/14 bg-tertiary p-4 text-sm leading-relaxed font-mono scrollbar">
         {showTab === "about-me" && (
-          <p className="whitespace-pre-line">{aboutMe}</p>
+          <div className="max-w-2xl mx-auto space-y-6 text-[15px] leading-7 text-white/85 font-mono">
+            {aboutMe.map((paragraph, i) => (
+              <p key={i} className="tracking-wide">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         )}
 
         {showTab === "education" && (
@@ -133,7 +139,7 @@ function Notepad() {
       </div>
 
       {/* Footer */}
-      <ul className="h-1/14 flex items-center bg-window-canvas px-2 text-sm rounded-b-md">
+      <ul className="h-1/14 flex items-center bg-secondary px-2 text-sm rounded-b-md">
         {statusItems.map((item, index) => (
           <li key={item.id} className="flex items-center">
             <span>{item.label}</span>

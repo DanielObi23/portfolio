@@ -14,9 +14,9 @@ function FileExplorer() {
   );
 
   return (
-    <div className="w-2xl h-137 rounded-md bg-window-canvas text-white flex flex-col">
+    <div className="w-2xl h-137 rounded-md bg-secondary text-white flex flex-col">
       {/* Top bar */}
-      <div className="h-12 flex items-center gap-2 px-3 bg-window-surface">
+      <div className="h-12 flex items-center gap-2 px-3 bg-primary">
         <img
           src="/icons/file-explorer-icons/folder-icon.svg"
           alt="folder logo"

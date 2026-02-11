@@ -26,35 +26,12 @@ const terminalNavIcons = [Columns2, Trash2, MoreHorizontal, Maximize, X];
 const firstname = "chibuikem";
 const lastname = "onwu-obi";
 
-const techStack = [
-  {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
-  },
-  {
-    category: "Styling",
-    items: ["Tailwind CSS", "CSS"],
-  },
-  {
-    category: "Backend",
-    items: ["Node.js", "Express", "FastAPI"],
-  },
-  {
-    category: "Database",
-    items: ["PostgreSQL"],
-  },
-  {
-    category: "Dev Tools",
-    items: ["Git", "GitHub"],
-  },
-];
-
 export function generateTechStackTable(
-  techStack: { category: string; items: string[] }[],
+  techStack: { category: string; technologies: string[] }[],
 ) {
-  const rows = techStack.map(({ category, items }) => ({
+  const rows = techStack.map(({ category, technologies }) => ({
     category,
-    tech: items.join(", "),
+    tech: technologies.join(", "),
   })); // Turning tech list into a single string
 
   const categoryWidth = Math.max(
@@ -85,11 +62,4 @@ export function generateTechStackTable(
   ].join("\n");
 }
 
-export {
-  techStack,
-  sideBarList,
-  terminalNav,
-  terminalNavIcons,
-  firstname,
-  lastname,
-};
+export { sideBarList, terminalNav, terminalNavIcons, firstname, lastname };
