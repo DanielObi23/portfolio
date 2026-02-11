@@ -1,23 +1,32 @@
 import MobileNavigation from "@/components/mobile/MobileNavigation";
 import { MobileOnly } from "@/hoc/MobileOnly";
+import { notFound } from "next/navigation";
 import { allFolders } from "@/constants/file-explorer";
 
-export default async function page({
+export default async function Page({
   params,
 }: {
-  params: Promise<{ txt: string }>;
+  params: Promise<{ file: string; txt: string }>;
 }) {
-  const { txt } = await params;
-  console.log(txt);
-  const folder = allFolders.find((folder) => folder.id === "gazetteer");
-  const txtFile = folder?.files.find((file) => file.fileType === "txt"); // issue here is if there's multiple files with fileType txt, fix this
+  const { file, txt } = await params;
+  const folder = allFolders.find((folder) => folder.id === file);
+
+  if (!folder) {
+    notFound();
+  }
+
+  const txtFile = folder.files.find((f) => f.fileType === "txt");
+
+  if (!txtFile) {
+    notFound();
+  }
 
   return (
     <MobileOnly>
-      <MobileNavigation title={`${folder?.title} ${txtFile?.title}`} />
+      <MobileNavigation title={`${folder.title} ${txtFile.title}`} />
       <div className="flex-1 bg-secondary p-4 text-sm leading-relaxed font-mono scrollbar rounded-b-md">
         <p className="whitespace-pre-line text-white">
-          {txtFile?.description.text}
+          {txtFile.description.text}
         </p>
         <div className="mt-6 space-y-4">
           <p className="text-xs uppercase tracking-wider text-neutral-400">
@@ -25,7 +34,7 @@ export default async function page({
           </p>
 
           <div className="space-y-3">
-            {txtFile?.description.techstack.map(({ category, items }) => (
+            {txtFile.description?.techstack?.map(({ category, items }) => (
               <div
                 key={category}
                 className="border border-[#2A2A2A] rounded-md bg-[#181818]"

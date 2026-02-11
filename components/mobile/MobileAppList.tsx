@@ -38,11 +38,11 @@ export default function MobileAppList() {
   return (
     <div className="flex-1 px-6 space-y-7">
       <div className="grid grid-cols-3 gap-y-10 gap-x-6">
-        {apps.map(({ title, href, icon, external }) => {
+        {apps.map(({ title, href, icon, iconSize, external }) => {
           const content = (
             <>
               <div className="size-16 bg-primary rounded-3xl flex items-center justify-center shadow-md transition active:scale-90">
-                <img src={icon} alt={`${title} icon`} className="size-9" />
+                <img src={icon} alt={`${title} icon`} className={iconSize} />
               </div>
 
               <p className="text-xs mt-2 text-center">{title}</p>

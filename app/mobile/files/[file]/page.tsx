@@ -3,8 +3,10 @@ import { MobileOnly } from "@/hoc/MobileOnly";
 import { cn } from "@/lib/utils";
 import { allFolders, FILE_TYPE_ICON } from "@/constants/file-explorer";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-export default async function page({
+//TODO: fix the comments in here and txt file
+export default async function Page({
   params,
 }: {
   params: Promise<{ file: string }>;
@@ -12,11 +14,15 @@ export default async function page({
   const { file } = await params;
   const activeFolderData = allFolders.find((folder) => folder.id === file);
 
+  if (!activeFolderData) {
+    notFound();
+  }
+
   return (
     <MobileOnly>
-      <MobileNavigation title={activeFolderData?.title ?? file} />
+      <MobileNavigation title={activeFolderData.title} />
       <div className="text-white grid grid-cols-9 gap-3 py-7">
-        {activeFolderData?.files.map((file, index) => {
+        {activeFolderData.files.map((file, index) => {
           const iconSrc = file.icon ?? FILE_TYPE_ICON[file.fileType];
 
           if (file.fileType === "url") {
@@ -55,6 +61,10 @@ export default async function page({
             return (
               <button
                 key={`${file.id}-${index}`}
+                // onClick={() => { return null
+                //   // TODO: Implement image preview or navigate to image viewer
+                //   // e.g., openImagePreview(file) or router.push(`/mobile/files/${file.id}`)
+                // }}
                 className="col-span-3 animate-fade-in flex flex-col items-center gap-2 p-2 rounded-md"
               >
                 <img src={iconSrc} alt="file icon" className="size-10" />
@@ -83,10 +93,11 @@ export default async function page({
           }
 
           if (file.fileType === "txt") {
+            //TODO: figure out a way to do dynamic route
             return (
               <Link
                 key={`${file.id}-${index}`}
-                href={`/mobile/files/gazetteer/txt`}
+                href={`/mobile/files/gazetteer/gazetteer-description`}
                 className="col-span-3 animate-fade-in flex flex-col items-center gap-2 p-2 rounded-md"
               >
                 <img src={iconSrc} alt="file icon" className="size-10" />

@@ -31,7 +31,7 @@ export default function Mobile() {
           <div className="size-16 bg-primary rounded-3xl flex items-center justify-center shadow-md transition active:scale-90">
             <img
               src="/icons/file-explorer-icons/folder-icon.svg"
-              alt="contacts icon"
+              alt="files icon"
               className="size-9"
             />
           </div>

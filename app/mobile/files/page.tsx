@@ -23,7 +23,7 @@ export default function page() {
         </div>
 
         <div className="flex flex-col gap-3 p-2 mt-2">
-          {folders.projects.reverse().map(({ title, id }) => (
+          {[...folders.projects].reverse().map(({ title, id }) => (
             <Link
               key={id}
               href={`/mobile/files/${id}`}
@@ -32,7 +32,7 @@ export default function page() {
               <div className="flex items-start gap-3">
                 <img
                   src="/icons/file-explorer-icons/folder-icon.svg"
-                  alt="text file"
+                  alt="folder icon"
                   className="size-6 opacity-80 mt-1"
                 />
 
