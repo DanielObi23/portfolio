@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥 OS-Style Developer Portfolio
 
-## Getting Started
+A reimagined developer portfolio that models projects as a functional file system.
 
-First, run the development server:
+Instead of a traditional scroll-based layout, users interact with **folders**, **files**, and **windows** on desktop — and **apps** on mobile/tablet.
+
+---
+
+## 📱 Mobile & 🖥 Desktop Previews
+
+| Mobile View                         | Desktop View                          |
+| ----------------------------------- | ------------------------------------- |
+| ![Mobile](public/readme/mobile.png) | ![Desktop](public/readme/desktop.png) |
+
+---
+
+## ✨ Features
+
+- **Dual Experience**  
+  Desktop-style window system vs. mobile app-based interface.
+
+- **Typed Architecture**  
+  Built with **TypeScript** using discriminated unions for type-safe file rendering.
+
+- **Supported File Types**
+  - **Text** — With optional structured tech-stack metadata.
+  - **Image** — Project screenshots.
+  - **PDF** — Document previews.
+  - **URL** — External link handling.
+
+- **State Management**  
+  Powered by **Zustand** for window layering and global state.
+
+- **Modern Stack**  
+  Next.js (App Router) + TailwindCSS.
+
+---
+
+## 🧠 Architecture Philosophy
+
+This portfolio treats projects as structured data.
+
+Each file type is strictly modeled and rendered conditionally using TypeScript unions.  
+All content lives in `/constants`, separating **data from presentation**.
+
+This makes the project:
+
+- Easy to extend
+- Easy to customize
+- Architecturally scalable
+- Beginner-friendly but structurally strong
+
+---
+
+## 🚀 Getting Started
+
+This project is designed as a **reusable template**.
+
+1. **Clone & Install**
+
+```bash
+git clone <your-repo-url>
+cd portfolio
+npm install
+
+```
+
+2. **Run Development Server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Customize Content**
+   Edit your data in:
+   `📂 /constants`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Note:** All portfolio content is centrally defined. You don't need to touch UI components unless you want to change the core styling.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Feel free to:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Improve architecture
+- Add new file types
+- Enhance mobile or desktop UX
+- Refactor window management
+- Submit feature ideas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Please see `CONTRIBUTING.md` for full guidelines.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+## 👤 Author
+
+**Chibuikem Daniel Onwu-Obi**
+_Full-Stack & AI Engineer_
+
+Available for: Freelance • Collaboration • Full-time
