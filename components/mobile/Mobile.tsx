@@ -4,7 +4,7 @@ import MobileAppList from "./MobileAppList";
 import { useEffect, useState } from "react";
 
 export default function Mobile() {
-  const [time, setTime] = useState("11:27");
+  const [time, setTime] = useState("11:28");
 
   useEffect(() => {
     const timeNow = new Date().toLocaleTimeString([], {
