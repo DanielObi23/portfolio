@@ -30,7 +30,7 @@ export default function Right() {
       <div
         className={cn(
           isSettingsModalOpen ? "flex" : "hidden",
-          "py-3 px-2 bg-gray-800 absolute bottom-13 left-0 w-full gap-2 rounded-lg",
+          "py-3 px-2 bg-gray-800 absolute bottom-13 left-0 w-full gap-2 rounded-lg z-2000",
         )}
       >
         <ModeToggle />

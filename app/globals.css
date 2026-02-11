@@ -97,12 +97,6 @@ body {
   background-position: center;
 }
 
-@media (max-width: 1023px) {
-  body {
-    background-image: url("/mobile-wallpaper.jpg");
-  }
-}
-
 body::before {
   content: "";
   position: absolute;
@@ -111,6 +105,16 @@ body::before {
   pointer-events: none;
   z-index: -1;
   transition: background 200ms ease;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background-image: url("/wallpapers/mobile-wallpaper.jpg");
+  }
+
+  body::before {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .dark {
