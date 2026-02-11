@@ -8,9 +8,9 @@ Instead of a traditional scroll-based layout, users interact with **folders**, *
 
 ## 📱 Mobile & 🖥 Desktop Previews
 
-| Mobile View                  | Desktop View                   |
-| ---------------------------- | ------------------------------ |
-| ![Mobile](readme/mobile.png) | ![Desktop](readme/desktop.png) |
+| Mobile View                         | Desktop View                          |
+| ----------------------------------- | ------------------------------------- |
+| ![Mobile](public/readme/mobile.png) | ![Desktop](public/readme/desktop.png) |
 
 ---
 
@@ -100,4 +100,7 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ## 👤 Author
 
-**Chibuikem Daniel Onwu-Obi** _Full-Stack & AI Engineer_ Available for: Freelance • Collaboration • Full-time
+**Chibuikem Daniel Onwu-Obi**
+_Full-Stack & AI Engineer_
+
+Available for: Freelance • Collaboration • Full-time
