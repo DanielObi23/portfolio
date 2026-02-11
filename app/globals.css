@@ -41,10 +41,10 @@
 }
 
 @theme inline {
-  --color-primary: oklch(21.4% 0 0deg);
-  --color-secondary: oklch(28.6% 0 0deg);
-  --color-tertiary: oklch(23.49% 0 0deg);
-  --color-accent: oklch(40% 0 0deg);
+  --color-primary: oklch(0.214 0 0);
+  --color-secondary: oklch(0.286 0 0);
+  --color-tertiary: oklch(0.2349 0 0);
+  --color-accent: oklch(0.4 0 0);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -97,7 +97,7 @@ body {
   background-position: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   body {
     background-image: url("/mobile-wallpaper.jpg");
   }

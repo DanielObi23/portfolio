@@ -5,6 +5,7 @@ import { ChevronDown, X, CircleUserRound, Settings } from "lucide-react";
 import {
   tabs,
   aboutMe,
+  aboutMeCharCount,
   education,
   educationCharCount,
   workExperience,
@@ -21,7 +22,7 @@ function Notepad() {
       id: "chars",
       label: `${
         showTab === "about-me"
-          ? aboutMe.length
+          ? aboutMeCharCount
           : showTab === "education"
             ? educationCharCount
             : workExperienceCharCount

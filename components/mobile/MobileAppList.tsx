@@ -28,8 +28,8 @@ export default function MobileAppList() {
       iconSize: "size-10",
     },
     {
-      title: "Files",
-      href: "/mobile/files",
+      title: "Folders",
+      href: "/mobile/folders",
       icon: "/icons/file-explorer-icons/folder-icon.svg",
       iconSize: "size-8",
     },

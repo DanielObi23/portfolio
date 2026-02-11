@@ -36,23 +36,33 @@ interface TechStackCategory {
 
 type TechStack = TechStackCategory[];
 
-interface SimpleStackDescription {
+interface BaseDescription {
+  text: string[];
+}
+
+interface NoStackDescription extends BaseDescription {
+  type: "no-stack";
+}
+
+interface SimpleStackDescription extends BaseDescription {
   type: "frontend" | "backend";
-  text: string;
   techstack: TechStack;
 }
 
-interface FullStackDescription {
+interface FullStackDescription extends BaseDescription {
   type: "full-stack";
-  text: string;
   techstack: TechStack;
 }
 
-type ProjectDescription = SimpleStackDescription | FullStackDescription;
+type ProjectDescription =
+  | NoStackDescription
+  | SimpleStackDescription
+  | FullStackDescription;
 
 interface ProjectFolder {
   id: string;
   title: string;
+  briefDescription: string;
   files: ProjectFile[];
 }
 
@@ -98,4 +108,5 @@ export type {
   ProjectFolder,
   ProjectDescription,
   FileType,
+  BaseFile,
 };

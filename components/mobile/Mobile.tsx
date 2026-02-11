@@ -27,11 +27,11 @@ export default function Mobile() {
 
       {/* Dock list */}
       <div className="flex justify-around border-t border-t-white/30 pt-4">
-        <Link href="/mobile/files" className="flex flex-col items-center">
+        <Link href="/mobile/folders" className="flex flex-col items-center">
           <div className="size-16 bg-primary rounded-3xl flex items-center justify-center shadow-md transition active:scale-90">
             <img
               src="/icons/file-explorer-icons/folder-icon.svg"
-              alt="files icon"
+              alt="folders icon"
               className="size-9"
             />
           </div>

@@ -3,6 +3,7 @@ import type { ProjectFolder } from "@/types/fileExplorerTypes";
 export const gazetteer: ProjectFolder = {
   id: "gazetteer",
   title: "Gazetteer",
+  briefDescription: "Map-based geographical data fetcher",
   files: [
     {
       id: "gazetteer-github",
@@ -22,8 +23,9 @@ export const gazetteer: ProjectFolder = {
       title: "description.txt",
       fileType: "txt",
       description: {
-        text: `Developed a map-based application presenting geographical and demographic data
-                  fetched from third-party APIs such as GeoNames and OpenWeather.`,
+        text: [
+          "Developed a map-based application presenting geographical and demographic data fetched from third-party APIs such as GeoNames and OpenWeather.",
+        ],
         type: "full-stack",
         techstack: [
           {

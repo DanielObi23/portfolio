@@ -3,6 +3,7 @@ import type { ProjectFolder } from "@/types/fileExplorerTypes";
 export const companyDirectory: ProjectFolder = {
   id: "company-directory",
   title: "Company Directory",
+  briefDescription: "Company personnel management system",
   files: [
     {
       id: "company-directory-website",
@@ -21,8 +22,9 @@ export const companyDirectory: ProjectFolder = {
       title: "description.txt",
       fileType: "txt",
       description: {
-        text: `Company personnel management system built through a full software
-development lifecycle including proposal, database design and testing.`,
+        text: [
+          "Company personnel management system built through a full software development lifecycle including proposal, database design and testing.",
+        ],
         type: "full-stack",
         techstack: [
           {

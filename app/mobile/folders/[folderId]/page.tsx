@@ -5,14 +5,13 @@ import { allFolders, FILE_TYPE_ICON } from "@/constants/file-explorer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-//TODO: fix the comments in here and txt file
 export default async function Page({
   params,
 }: {
-  params: Promise<{ file: string }>;
+  params: Promise<{ folderId: string }>;
 }) {
-  const { file } = await params;
-  const activeFolderData = allFolders.find((folder) => folder.id === file);
+  const { folderId } = await params;
+  const activeFolderData = allFolders.find((folder) => folder.id === folderId);
 
   if (!activeFolderData) {
     notFound();
@@ -57,21 +56,18 @@ export default async function Page({
             );
           }
 
-          if (file.fileType === "img") {
+          if (file.fileType === "img" || file.fileType === "txt") {
             return (
-              <button
+              <Link
                 key={`${file.id}-${index}`}
-                // onClick={() => { return null
-                //   // TODO: Implement image preview or navigate to image viewer
-                //   // e.g., openImagePreview(file) or router.push(`/mobile/files/${file.id}`)
-                // }}
+                href={`/mobile/folders/${folderId}/${file.id}`}
                 className="col-span-3 animate-fade-in flex flex-col items-center gap-2 p-2 rounded-md"
               >
                 <img src={iconSrc} alt="file icon" className="size-10" />
                 <span className="text-xs text-center opacity-80">
                   {file.title}
                 </span>
-              </button>
+              </Link>
             );
           }
 
@@ -89,22 +85,6 @@ export default async function Page({
                   {file.title}
                 </span>
               </a>
-            );
-          }
-
-          if (file.fileType === "txt") {
-            //TODO: figure out a way to do dynamic route
-            return (
-              <Link
-                key={`${file.id}-${index}`}
-                href={`/mobile/files/gazetteer/gazetteer-description`}
-                className="col-span-3 animate-fade-in flex flex-col items-center gap-2 p-2 rounded-md"
-              >
-                <img src={iconSrc} alt="file icon" className="size-10" />
-                <span className="text-xs text-center opacity-80">
-                  {file.title}
-                </span>
-              </Link>
             );
           }
 

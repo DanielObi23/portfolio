@@ -3,6 +3,7 @@ import type { ProjectFolder } from "@/types/fileExplorerTypes";
 export const focusFlow: ProjectFolder = {
   id: "focusflow",
   title: "FocusFlow",
+  briefDescription: "An AI-powered skill learning path generator",
   files: [
     {
       id: "focusflow-website",
@@ -22,9 +23,9 @@ export const focusFlow: ProjectFolder = {
       fileType: "txt",
       description: {
         type: "full-stack",
-        text: `An AI-powered skill learning path generator.
-            FocusFlow helps users develop new skills by creating personalized learning paths
-            with step-by-step guidance.`,
+        text: [
+          "FocusFlow helps users develop new skills by creating personalized learning paths with step-by-step guidance.",
+        ],
         techstack: [
           {
             category: "Frontend",
