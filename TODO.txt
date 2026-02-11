@@ -1,31 +1,10 @@
 update contacts window to have icons as well icon✅
+
 on page load, a flash of mobileonlyfallback shows ✅
-change wallpaper to microsoft default, same with android default
 
-files: [
-  website,
-  github,
-  description,
-  ...makeScreenshots("focusflow", 7),
-],
+change wallpaper to microsoft default, same with android default ✅
 
-export function makeScreenshots(
-  project: string,
-  count: number,
-) {
-  return Array.from({ length: count }, (_, i) => {
-    const n = i + 1;
-    return {
-      id: `${project}-screenshot-${n}`,
-      title: `screenshot-${n}`,
-      fileType: "img" as const,
-      imageUrl: `/screenshots/${project}/${project}-screenshot-${n}.jpg`,
-    };
-  });
-}
-
-
-fix all windows showing at the start ✅
+finish /mobile/files page for "txt" and "img" fileType
 
 write a readme for this portfolio
 

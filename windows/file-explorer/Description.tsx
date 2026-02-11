@@ -7,12 +7,12 @@ function Description() {
   if (!data) return null;
 
   return (
-    <div className="bg-[#141414] text-white w-150 h-150 rounded-md">
+    <div className="bg-primary text-white w-150 h-150 rounded-md">
       {/* Header */}
       <div className="h-1/14 flex justify-between px-2 pt-2">
         <div className="flex items-end">
           <img
-            src="/icons/notepad-icon.png"
+            src="/icons/window-icons/notepad-icon.svg"
             alt="notepad logo"
             className="size-6 ml-1 mr-3 self-center"
           />
@@ -25,7 +25,7 @@ function Description() {
       </div>
 
       {/* Editor space */}
-      <div className="h-13/14 bg-[#1E1E1E] p-4 text-sm leading-relaxed font-mono scrollbar rounded-b-md">
+      <div className="h-13/14 bg-secondary p-4 text-sm leading-relaxed font-mono scrollbar rounded-b-md">
         <p className="whitespace-pre-line">{data.description.text}</p>
         <div className="mt-6 space-y-4">
           <p className="text-xs uppercase tracking-wider text-neutral-400">

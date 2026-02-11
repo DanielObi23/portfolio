@@ -1,16 +1,16 @@
 import {
-  techStack,
   terminalNav,
   terminalNavIcons,
   firstname,
   lastname,
   generateTechStackTable,
 } from "@/constants/vscode";
+import { techStack } from "@/constants";
 import { ChevronDown, ChevronRight, Plus, SquareTerminal } from "lucide-react";
 
 export default function VscodeTerminal() {
   return (
-    <div className="col-span-11 row-span-11 border-t mt-3 bg-window-surface border-[#1e1e1e]">
+    <div className="col-span-11 row-span-11 border-t mt-3 bg-primary border-[#1e1e1e]">
       <div className="flex items-center justify-between px-2 py-1">
         <ul className="flex gap-2 text-xs">
           {terminalNav.map((nav, i) => (

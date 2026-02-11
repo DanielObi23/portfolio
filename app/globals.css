@@ -41,10 +41,10 @@
 }
 
 @theme inline {
-  --color-window-surface: oklch(0.214 0 0);
-  --color-window-canvas: oklch(0.286 0 0);
-  --color-window-secondary: oklch(0.2349 0 0);
-  --color-window-accent: oklch(0.2831 0 0);
+  --color-primary: oklch(21.4% 0 0deg);
+  --color-secondary: oklch(28.6% 0 0deg);
+  --color-tertiary: oklch(23.49% 0 0deg);
+  --color-accent: oklch(40% 0 0deg);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -67,13 +67,13 @@
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
+  /* --color-accent: var(--accent); */
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
+  /* --color-secondary: var(--secondary); */
   --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
+  /* --color-primary: var(--primary); */
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -91,10 +91,16 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/wallpaper/desktop-wallpaper.jpg");
+  background-image: url("/wallpapers/desktop-wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: url("/mobile-wallpaper.jpg");
+  }
 }
 
 body::before {

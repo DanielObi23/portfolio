@@ -1,11 +1,11 @@
 import WindowsControls from "@/components/desktop/WindowsControls";
 import WindowWrapper from "@/hoc/WindowsWrapper";
-import { contacts } from "@/constants/contacts";
+import { contacts } from "@/constants";
 
 function Contacts() {
   return (
-    <div className="w-xl rounded-md overflow-hidden bg-window-canvas text-sm text-white">
-      <div className="grid grid-cols-[1fr_auto_1fr] items-center h-10 px-3 bg-window-surface">
+    <div className="w-xl rounded-md overflow-hidden bg-secondary text-sm text-white">
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center h-10 px-3 bg-primary">
         <div />
         <p className="font-medium">Contacts</p>
         <div className="flex justify-end">
@@ -36,7 +36,7 @@ function Contacts() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 px-3 py-2 rounded-md hover:bg-window-secondary transition"
+                className="flex items-center justify-center gap-3 px-3 py-2 rounded-md hover:bg-tertiary transition"
               >
                 <img src={icon} alt={`${title} icon`} className="size-5" />
 

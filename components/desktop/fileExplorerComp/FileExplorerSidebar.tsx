@@ -12,7 +12,7 @@ export default function FileExplorerSidebar({
   setActiveFolder: Dispatch<SetStateAction<ActiveFolder["id"]>>;
 }) {
   return (
-    <aside className="w-40 bg-window-surface p-3 text-sm space-y-4">
+    <aside className="w-40 bg-primary p-3 text-sm space-y-4">
       {/* Favourites */}
       <div>
         <p className="px-2 mb-1 text-xs uppercase tracking-wide opacity-50">
@@ -24,8 +24,8 @@ export default function FileExplorerSidebar({
             <li
               key={`${id}-${index}`}
               className={cn(
-                activeFolder === id ? "bg-window-accent" : "",
-                "flex items-center gap-2 px-2 py-1.5 rounded hover:bg-window-canvas cursor-pointer",
+                activeFolder === id ? "bg-accent" : "",
+                "flex items-center gap-2 px-2 py-1.5 rounded hover:bg-secondary cursor-pointer",
               )}
               onClick={() => setActiveFolder(id)}
             >
