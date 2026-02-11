@@ -1,11 +1,17 @@
 import { BatteryMedium } from "lucide-react";
 import Link from "next/link";
 import MobileAppList from "./MobileAppList";
+import { useEffect, useState } from "react";
 
 export default function Mobile() {
-  const time = new Date().toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
+  const [time, setTime] = useState("11:27");
+
+  useEffect(() => {
+    const timeNow = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    setTime(timeNow);
   });
 
   return (

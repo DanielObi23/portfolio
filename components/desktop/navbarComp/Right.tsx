@@ -7,23 +7,31 @@ import { ModeToggle } from "../../ModeToggle";
 export default function Right() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [brightness, setBrightness] = useState("0.9");
+  const [clock, setClock] = useState({ date: "2/11/2026", time: "11:27 PM" });
 
   useEffect(() => {
     const brightnessValue = Math.abs(Number(brightness) - 0.9).toString(); //The range slider value is in reverse
     document.documentElement.style.setProperty("--brightness", brightnessValue);
   }, [brightness]);
 
-  const now = new Date();
-  const time = new Intl.DateTimeFormat(undefined, {
-    hour: "numeric",
-    minute: "2-digit",
-  }).format(now);
+  useEffect(() => {
+    const now = new Date();
+    const time = new Intl.DateTimeFormat(undefined, {
+      hour: "numeric",
+      minute: "2-digit",
+    }).format(now);
 
-  const date = new Intl.DateTimeFormat(undefined, {
-    month: "numeric",
-    day: "numeric",
-    year: "numeric",
-  }).format(now);
+    const date = new Intl.DateTimeFormat(undefined, {
+      month: "numeric",
+      day: "numeric",
+      year: "numeric",
+    }).format(now);
+
+    setClock({
+      date,
+      time,
+    });
+  }, []);
 
   return (
     <div className="flex gap-3.5 items-center justify-center relative">
@@ -87,8 +95,8 @@ export default function Right() {
       </button>
 
       <div className="flex flex-col text-end text-xs text-white">
-        <time>{time}</time>
-        <time>{date}</time>
+        <time>{clock.time}</time>
+        <time>{clock.date}</time>
       </div>
     </div>
   );
