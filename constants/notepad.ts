@@ -21,6 +21,10 @@ const aboutMe = [
   "This hands-on experience allowed me to apply a wide range of programming languages and development tools, solidifying my technical knowledge and problem-solving abilities.",
 ];
 
+const aboutMeCharCount = aboutMe.reduce((total, text) => {
+  return total + text.length;
+});
+
 const education = [
   {
     qualification: "GCSE",
@@ -107,6 +111,7 @@ const toolbarItems = [
 export {
   tabs,
   aboutMe,
+  aboutMeCharCount,
   education,
   educationCharCount,
   workExperience,

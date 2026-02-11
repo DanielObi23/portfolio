@@ -26,41 +26,52 @@ function Description() {
 
       {/* Editor space */}
       <div className="h-13/14 bg-secondary p-4 text-sm leading-relaxed font-mono scrollbar rounded-b-md">
-        <p className="whitespace-pre-line">{data.description.text}</p>
+        <div className="px-2 py-2 max-w-2xl mx-auto space-y-3 text-[15px] leading-7 text-white/85 font-mono">
+          {data.description.text.map((paragraph, i) => (
+            <p
+              key={i}
+              className="pb-4 border-b border-white/5 last:border-none"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
         <div className="mt-6 space-y-4">
           <p className="text-xs uppercase tracking-wider text-neutral-400">
             Tech Stack
           </p>
 
-          <div className="space-y-3">
-            {data.description.techstack.map(({ category, items }) => (
-              <div
-                key={category}
-                className="border border-[#2A2A2A] rounded-md bg-[#181818]"
-              >
-                {/* Category header */}
-                <div className="px-3 py-1.5 border-b border-[#2A2A2A] bg-[#1F1F1F]">
-                  <span className="text-sm font-medium text-neutral-200">
-                    {category}
-                  </span>
-                </div>
+          {data.description.type !== "no-stack" && (
+            <div className="space-y-3">
+              {data.description.techstack.map(({ category, items }) => (
+                <div
+                  key={category}
+                  className="border border-[#2A2A2A] rounded-md bg-[#181818]"
+                >
+                  {/* Category header */}
+                  <div className="px-3 py-1.5 border-b border-[#2A2A2A] bg-[#1F1F1F]">
+                    <span className="text-sm font-medium text-neutral-200">
+                      {category}
+                    </span>
+                  </div>
 
-                {/* Items */}
-                <div className="px-3 py-2 text-sm text-neutral-300">
-                  <ul className="flex flex-wrap gap-x-3 gap-y-1">
-                    {items.map((item) => (
-                      <li
-                        key={item}
-                        className="before:content-['•'] before:mr-2 before:text-neutral-500"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Items */}
+                  <div className="px-3 py-2 text-sm text-neutral-300">
+                    <ul className="flex flex-wrap gap-x-3 gap-y-1">
+                      {items.map((item) => (
+                        <li
+                          key={item}
+                          className="before:content-['•'] before:mr-2 before:text-neutral-500"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

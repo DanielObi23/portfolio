@@ -1,32 +1,42 @@
+"use client";
+
 import MobileNavigation from "@/components/mobile/MobileNavigation";
 import { folders } from "@/constants/file-explorer";
 import { MobileOnly } from "@/hoc/MobileOnly";
 import { Mic, Search } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
-//TODO: brief description, figure out what to put there or remove it, maybe put techstack instead or description but truncate
 export default function page() {
+  const [input, setInput] = useState("");
+
+  const projects = folders.projects
+    .filter((project) => project.title.includes(input))
+    .reverse();
+
   return (
     <MobileOnly>
-      <MobileNavigation title="Files" />
+      <MobileNavigation title="Folders" />
       <div className="px-5 py-4 text-white">
-        <div className="rounded-md bg-accent flex items-baseline justify-between px-2.5 py-2 text-sm order-2">
+        <label className="rounded-md bg-accent flex items-baseline justify-between px-2.5 py-2 text-sm order-2">
           <div className="flex gap-2 border-0">
             <Search className="h-4.5 text-white" />
             <input
               placeholder="Search"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
               className="w-30 focus:outline-none placeholder-white"
             />
           </div>
 
           <Mic className="h-4.5 text-white" />
-        </div>
+        </label>
 
         <div className="flex flex-col gap-3 p-2 mt-2">
-          {[...folders.projects].reverse().map(({ title, id }) => (
+          {projects.map(({ title, id, briefDescription }) => (
             <Link
               key={id}
-              href={`/mobile/files/${id}`}
+              href={`/mobile/folders/${id}`}
               className="bg-tertiary rounded-xl p-4 active:scale-[0.98] transition"
             >
               <div className="flex items-start gap-3">
@@ -39,7 +49,7 @@ export default function page() {
                 <div className="flex flex-col">
                   <p className="text-sm font-semibold">{title}</p>
                   <p className="text-xs opacity-60 line-clamp-2">
-                    brief description
+                    {briefDescription}
                   </p>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import type { ProjectFolder } from "@/types/fileExplorerTypes";
 export const fluentroam: ProjectFolder = {
   id: "fluentroam",
   title: "FluentRoam",
+  briefDescription: "An AI-powered learning path generator",
   files: [
     {
       id: "fluentroam-website",
@@ -21,8 +22,9 @@ export const fluentroam: ProjectFolder = {
       title: "description.txt",
       fileType: "txt",
       description: {
-        text: `AI-powered language learning application for practicing reading,
-              writing, listening and speaking with real-time feedback.`,
+        text: [
+          "AI-powered language learning application for practicing reading, writing, listening and speaking with real-time feedback.",
+        ],
         type: "full-stack",
         techstack: [
           {

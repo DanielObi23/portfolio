@@ -22,6 +22,7 @@ const folders: FolderStructure = {
     {
       id: "resume",
       title: "Resume",
+      briefDescription: "My resume",
       files: [
         {
           id: "resume-pdf",
