@@ -4,7 +4,7 @@ import MobileAppList from "./MobileAppList";
 import { useEffect, useState } from "react";
 
 export default function Mobile() {
-  const [time, setTime] = useState("11:28");
+  const [time, setTime] = useState("");
 
   useEffect(() => {
     const timeNow = new Date().toLocaleTimeString([], {
@@ -12,7 +12,7 @@ export default function Mobile() {
       minute: "2-digit",
     });
     setTime(timeNow);
-  });
+  }, []);
 
   return (
     <div className="flex flex-col gap-4 justify-between h-dvh py-5 px-3 text-white">

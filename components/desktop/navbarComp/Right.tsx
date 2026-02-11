@@ -7,7 +7,7 @@ import { ModeToggle } from "../../ModeToggle";
 export default function Right() {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [brightness, setBrightness] = useState("0.9");
-  const [clock, setClock] = useState({ date: "2/11/2026", time: "11:28 PM" });
+  const [clock, setClock] = useState({ date: "", time: "" });
 
   useEffect(() => {
     const brightnessValue = Math.abs(Number(brightness) - 0.9).toString(); //The range slider value is in reverse
