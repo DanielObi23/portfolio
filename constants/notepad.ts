@@ -23,7 +23,7 @@ const aboutMe = [
 
 const aboutMeCharCount = aboutMe.reduce((total, text) => {
   return total + text.length;
-});
+}, 0);
 
 const education = [
   {

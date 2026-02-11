@@ -36,12 +36,11 @@ function Description() {
             </p>
           ))}
         </div>
-        <div className="mt-6 space-y-4">
-          <p className="text-xs uppercase tracking-wider text-neutral-400">
-            Tech Stack
-          </p>
-
-          {data.description.type !== "no-stack" && (
+        {data.description.type !== "no-stack" && (
+          <div className="mt-6 space-y-4">
+            <p className="text-xs uppercase tracking-wider text-neutral-400">
+              Tech Stack
+            </p>
             <div className="space-y-3">
               {data.description.techstack.map(({ category, items }) => (
                 <div
@@ -71,8 +70,8 @@ function Description() {
                 </div>
               ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

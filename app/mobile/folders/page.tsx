@@ -11,7 +11,9 @@ export default function page() {
   const [input, setInput] = useState("");
 
   const projects = folders.projects
-    .filter((project) => project.title.includes(input))
+    .filter((project) =>
+      project.title.toLowerCase().includes(input.toLowerCase()),
+    )
     .reverse();
 
   return (
