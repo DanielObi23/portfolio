@@ -11,12 +11,12 @@ export const gazetteer: ProjectFolder = {
       fileType: "url",
       link: "https://github.com/DanielObi23/chibuikemOnwu-Obi/tree/main/project1",
     },
-    {
-      id: "gazetteer-website",
-      title: "website",
-      fileType: "url",
-      link: "https://chibuikemonwuobi.co.uk/project1/",
-    },
+    // {
+    //   id: "gazetteer-website",
+    //   title: "website",
+    //   fileType: "url",
+    //   link: "https://chibuikemonwuobi.co.uk/project1/",
+    // },
 
     {
       id: "gazetteer-description",

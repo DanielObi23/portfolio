@@ -5,12 +5,12 @@ export const companyDirectory: ProjectFolder = {
   title: "Company Directory",
   briefDescription: "Company personnel management system",
   files: [
-    {
-      id: "company-directory-website",
-      title: "website",
-      fileType: "url",
-      link: "https://chibuikemonwuobi.co.uk/project2/",
-    },
+    // {
+    //   id: "company-directory-website",
+    //   title: "website",
+    //   fileType: "url",
+    //   link: "https://chibuikemonwuobi.co.uk/project2/",
+    // },
     {
       id: "company-directory-github",
       title: "github",
