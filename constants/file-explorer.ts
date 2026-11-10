@@ -8,6 +8,7 @@ import {
   companyDirectory,
   focusFlow,
   fluentroam,
+  smartScheduler,
 } from "./fileExplorerProjects";
 
 const FILE_TYPE_ICON: Record<FileType, string> = {
@@ -34,7 +35,7 @@ const folders: FolderStructure = {
     },
   ],
 
-  projects: [gazetteer, companyDirectory, focusFlow, fluentroam],
+  projects: [gazetteer, companyDirectory, focusFlow, fluentroam, smartScheduler],
 };
 
 const allFolders: ProjectFolder[] = Object.values(folders).flat();
